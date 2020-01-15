@@ -8,7 +8,7 @@ import hangman_final.SinglePlayer;
 public class hangman_final {
 	public static void main(String args[]) throws IOException {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Start?");
+		System.out.println("Do you want to start?");
 		boolean playing = true; 
 		while (playing) {
 			SinglePlayer game = new SinglePlayer();
