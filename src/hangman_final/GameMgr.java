@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public abstract class GameMgr {
 	// Defining a few variables and constants. 
-	public int maxTries = 6; 
+	public int maxTries = 5; 
 	String word; 
 	public StringBuilder guessedLetters; 
 	public ArrayList<Character> guessedList = new ArrayList<>();
@@ -52,17 +52,86 @@ public abstract class GameMgr {
 	
 	public String dyingBoi() {
 		switch(currentTry) {
-		case 0: return "Zero wrong";
-		case 1: return "One wrong";
-		case 2: return "Two wrong";
-		case 3: return "Three wrong";
-		case 4: return "Four wrong";
-		case 5: return "Five wrong";
-		case 6: return "Six wrong"; 
-		default: return "Six wrong, game over.";
+		case 0: return zero();
+		case 1: return one();
+		case 2: return two();
+		case 3: return three();
+		case 4: return four();
+		case 5: return five();
+		default: return six(); 
 		}
 	}
 	
+	private String six() {
+		return "  +---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				" /|\\  |\n" + 
+				" / \\  |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String five() {
+		return "  +---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				" /|\\  |\n" + 
+				" /    |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String four() {
+		return "  +---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				" /|\\  |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String three() {
+		return "+---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				" /|   |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String two() {
+		return "+---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				"  |   |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String one() {
+		return "+---+\n" + 
+				"  |   |\n" + 
+				"  O   |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
+	private String zero() {
+		return "+---+\n" + 
+				"  |   |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"      |\n" + 
+				"=========";
+	}
+
 	// Gets the guessed letters. 
 	public String getGuessedLetters() {
 		return guessedLetters.toString();
