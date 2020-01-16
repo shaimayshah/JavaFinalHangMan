@@ -20,6 +20,8 @@ public class GameManager {
 				do {
 					System.out.println(game.dyingBoi());
 					System.out.println();
+					System.out.println("Current guessed letters: " + game.getGuessedList());
+					System.out.println();
 					System.out.println(game.getGuessedLetters());
 					
 					// Get guess 
@@ -56,6 +58,8 @@ public class GameManager {
 				}
 				do {
 					System.out.println(game.dyingBoi());
+					System.out.println();
+					System.out.println("Current guessed letters: " + game.getGuessedList());
 					System.out.println();
 					System.out.println(game.getGuessedLetters());
 					
